@@ -1,16 +1,17 @@
 package arithmeticoperations;
 
+import interfaceclass.Amount;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import utils.CurrencyAmount;
 
-public class SumDTO extends Amount {
+public class SumDTO implements Amount {
 
   private Pattern pattern =
       Pattern.compile("^([-]?[0-9]*p)? ?([-]?[0-9]*s)? ?([-]?[0-9]*d)? ? "
           + "\\+ ([-]?[0-9]*p)? ?([-]?[0-9]*s)? ?([-]?[0-9]*d)?$");
 
-  public Sum sum(final String inputString) {
+  public Sum operation(final String inputString) {
     Matcher matcher = pattern.matcher(inputString);
 
     if (matcher.find()) {

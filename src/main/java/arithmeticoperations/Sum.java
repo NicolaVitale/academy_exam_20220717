@@ -1,5 +1,6 @@
 package arithmeticoperations;
 
+import interfaceclass.Operation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import utils.ConvertOperator;
@@ -7,7 +8,7 @@ import utils.CurrencyAmount;
 
 @Getter
 @AllArgsConstructor
-public class Sum {
+public class Sum implements Operation {
 
   private final CurrencyAmount operator1;
   private final CurrencyAmount operator2;

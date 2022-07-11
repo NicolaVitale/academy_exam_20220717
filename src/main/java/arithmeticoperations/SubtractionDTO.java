@@ -1,16 +1,17 @@
 package arithmeticoperations;
 
+import interfaceclass.Amount;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import utils.CurrencyAmount;
 
-public class SubtractionDTO extends Amount {
+public class SubtractionDTO implements Amount {
 
   private final Pattern pattern =
       Pattern.compile("^([-]?[0-9]*p)? ?([-]?[0-9]*s)? ?([-]?[0-9]*d)? ? "
           + "- ([-]?[0-9]*p)? ?([-]?[0-9]*s)? ?([-]?[0-9]*d)?$");
 
-  public Subtraction subtraction(final String inputString) {
+  public Subtraction operation(final String inputString) {
     final Matcher matcher = pattern.matcher(inputString);
 
     if (matcher.find()) {
