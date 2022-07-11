@@ -1,5 +1,6 @@
-package arithmeticoperations;
+package operationDTO;
 
+import arithmeticoperations.Multiplication;
 import interfaceclass.Amount;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -12,7 +13,7 @@ public class MultiplicationDTO implements Amount {
       Pattern.compile("^([-]?[0-9]*p)? ?([-]?[0-9]*s)?"
           + " ?([-]?[0-9]*d)? ? \\* ([-]?[0-9]*)$");
 
-  public Multiplication operation(final String inputString) {
+  public Multiplication operation(String inputString) {
     final Matcher matcher = pattern.matcher(inputString);
 
     if (matcher.find()) {

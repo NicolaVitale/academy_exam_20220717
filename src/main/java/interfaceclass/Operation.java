@@ -4,6 +4,6 @@ import utils.CurrencyAmount;
 
 public interface Operation {
 
-  CurrencyAmount operation();
+  CurrencyAmount currencyAmount();
 
 }

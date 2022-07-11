@@ -13,7 +13,7 @@ public class Multiplication implements Operation {
   private final CurrencyAmount operator1;
   private final int operator2;
 
-  public CurrencyAmount operation() {
+  public CurrencyAmount currencyAmount() {
     int penniesFirstOperand = ConvertOperator.currencyAmountToPennies(operator1);
     return ConvertOperator.penniesToCurrencyAmount(penniesFirstOperand * operator2);
   }

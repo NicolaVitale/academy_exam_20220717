@@ -5,8 +5,10 @@ import lombok.Getter;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import lombok.Setter;
 
 @Getter
+@Setter
 @AllArgsConstructor
 public class CurrencyAmount {
 

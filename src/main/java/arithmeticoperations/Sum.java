@@ -13,7 +13,7 @@ public class Sum implements Operation {
   private final CurrencyAmount operator1;
   private final CurrencyAmount operator2;
 
-  public CurrencyAmount operation() {
+  public CurrencyAmount currencyAmount() {
 
     int penniesOperator1 = ConvertOperator.currencyAmountToPennies(operator1);
     int penniesOperator2 = ConvertOperator.currencyAmountToPennies(operator2);
